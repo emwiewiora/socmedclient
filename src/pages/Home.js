@@ -9,7 +9,7 @@ import { FETCH_POSTS_QUERY } from "../util/graphql";
 
 function Home() {
   const { user } = useContext(AuthContext);
-  // had to change this for what is in the tutorial. used fix posted in tutorial repo.
+  // had to change this from what is in the tutorial. used fix posted in tutorial repo.
   let posts = "";
   const { loading, data } = useQuery(FETCH_POSTS_QUERY);
   if (data) {
@@ -17,7 +17,7 @@ function Home() {
   }
 
   return (
-    <Grid columns={3} stackable>
+    <Grid stackable columns={3}>
       <Grid.Row className="page-title">
         <h1>Recent Posts</h1>
       </Grid.Row>
